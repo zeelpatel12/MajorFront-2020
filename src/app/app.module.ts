@@ -13,6 +13,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     ProductDetailComponent,
     CartComponent,
     UserDetailComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

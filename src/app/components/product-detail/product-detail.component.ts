@@ -28,7 +28,7 @@ export class ProductDetailComponent implements OnInit {
         this.productsService.getProduct(this.route.snapshot.paramMap.get('id')).subscribe((product : Product) => {
             this.product = product
             this.product.imageUrl = product.image ? 'data:image/jpeg;base64,' + product.image :
-            "../../../assets/static/images/product-placeholder.png";
+            "../../../assets/static/images/apple.jpg";
         }, (error: ErrorEvent) => {
             console.log(this.product);
         })

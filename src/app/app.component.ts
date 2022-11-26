@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
-
+import { faUser , faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import { CartItem } from 'src/app/models/CartItem';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    user=faUser;
+    cart=faShoppingCart;
+    mainDialogType="";
+    cartItems : CartItem[]
     title = 'frontend';
     public term : string
     public isTokenThere : boolean
@@ -21,4 +25,7 @@ export class AppComponent {
     search () {
         this.router.navigate(["/shop", this.term]).then(() => window.location.reload())
     }
+    closeDialog(){
+        this.mainDialogType = "";
+     }
 }
