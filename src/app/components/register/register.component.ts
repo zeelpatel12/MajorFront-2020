@@ -17,10 +17,13 @@ export class RegisterComponent implements OnInit {
     public address : string;
     public phone : string;
     public name : string;
+    public role: string;
 
     public error : string
 
-    constructor(private usersService : UsersService, private router : Router) { }
+    constructor(private usersService : UsersService, private router : Router) {
+        this.role="user";
+     }
 
     ngOnInit(): void {
         if (localStorage.getItem('token')) {
@@ -44,7 +47,7 @@ export class RegisterComponent implements OnInit {
         }
 
         this.usersService.register(
-            this.username, this.password, this.email, this.email, this.address, this.phone).subscribe((token : Token) => {
+            this.username, this.password, this.email, this.email, this.address, this.phone,this.role).subscribe((token : Token) => {
                 localStorage.setItem('token', token.token);
                 this.router.navigateByUrl('/account').then(() => window.location.reload())
             }, (error : ErrorEvent) => {

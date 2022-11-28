@@ -13,14 +13,15 @@ export class UsersService {
     constructor(private http : HttpClient) { }
 
     register (username : string, password : string, email : string, name : string, address : string, 
-        phone : string) : Observable<Token> {
+        phone : string, role:string) : Observable<Token> {
         return this.http.post<Token>(`${environment.API_URL}/register`, {
             username,
             password,
             email,
             name,
             address,
-            phone
+            phone,
+            role
         })
     }
 
@@ -54,18 +55,23 @@ export class UsersService {
         });
     }
 
-    updateUser (id : string, username : string, password : string, email : string, name : string, address : string, phone : string) : Observable<User> {
+    updateUser (id : string, username : string, password : string, email : string, name : string, address : string, phone : string, role:String) : Observable<User> {
         return this.http.put<User>(`${environment.API_URL}/api/users/${id}`, {
             username,
             password,
             email,
             name,
             address,
-            phone 
+            phone,
+            role
         })
     }
 
     deleteUser (id : string) : Observable<any> {
         return this.http.delete(`${environment.API_URL}/api/users/${id}`);
+    }
+
+    getRole(id:string): Observable<String>{
+        return this.http.get<String>(`${environment.API_URL}/api/userRoleByID/${id}`);
     }
 }
