@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from "@angular/common/http";
 import {  ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -12,6 +13,11 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartComponent } from './components/cart/cart.component';
+import { AddressComponent } from './components/address/address.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     ProductListComponent,
     ProductDetailComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    CartComponent,
+    UserDetailComponent,
+  
+    AddressComponent,
+    PaymentComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +43,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule, 
     // NgbModule,
     ReactiveFormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

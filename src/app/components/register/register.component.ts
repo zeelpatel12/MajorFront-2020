@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Token } from 'src/app/models/Token';
-
+import { User } from 'src/app/models/User';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({

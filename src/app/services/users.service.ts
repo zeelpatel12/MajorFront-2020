@@ -10,9 +10,7 @@ import { User } from '../models/User';
 })
 
 export class UsersService {
-    addProduct() {
-        throw new Error('Method not implemented.');
-    }
+  
     constructor(private http : HttpClient) { }
 
     register (username : string, password : string, email : string, name : string, address : string, 
@@ -25,6 +23,10 @@ export class UsersService {
             address,
             phone
         })
+    }
+
+    addProduct() {
+        throw new Error('Method not implemented.');
     }
 
     login (username : string, password : string) : Observable<Token> {

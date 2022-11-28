@@ -10,7 +10,7 @@ import { Product } from '../models/Product';
 export class ProductsService {
 
     private baseUrl = 'http://localhost:8080/api/products';
-    constructor(private http : HttpClient) { }
+
 
     
     // createProducts (product: Product) : Observable<Product> {
@@ -25,6 +25,8 @@ export class ProductsService {
     getProduct (id : string) : Observable<Product> {
         return this.http.get<Product>(`${environment.API_URL}/api/products/${id}`);
     }
+
+    constructor(private http : HttpClient) { }
 
     getProducts () : Observable<Product[]> {
         return this.http.get<Product[]>(`${environment.API_URL}/api/products`);
@@ -47,3 +49,7 @@ export class ProductsService {
   
     
   
+    // getProduct (id : string) : Observable<Product> {
+    //     return this.http.get<Product>(`${environment.API_URL}/api/products/${id}`);
+    // }
+

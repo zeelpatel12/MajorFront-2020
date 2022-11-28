@@ -1,5 +1,5 @@
 <div style="margin-top: 5rem;">
-    <!-- <style>
+    <style>
         .product-img-container {
             background-position: center;
             background-repeat: no-repeat;
@@ -11,6 +11,13 @@
     </style> -->
     <h1 class="mx-auto text-center" style="margin-bottom: 6rem;">Our Products</h1>
     <!-- <div class="d-flex" style="justify-content: center; flex-wrap: wrap;">
+            background-image: url("../../../assets/static/images/apple.jpg");
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+    <h1 class="mx-auto text-center" style="margin-bottom: 6rem;">Our Products</h1>
+    <div class="d-flex" style="justify-content: center; flex-wrap: wrap;">
         <div *ngFor="let product of products; let i = index">
             <div 
                 style="width: 300px;"
@@ -22,11 +29,13 @@
                     class="m-0 py-2 px-2"
                 >{{ product.name }}</h6>
                 <div class="product-img-container" [style.backgroundImage]=url()></div>
+                <div class="product-img-container" [style.backgroundImage]="'url(' + product.imageUrl + ')'"></div>
                 <div 
                     style="background-color: #fff1; justify-content: space-between; align-items: center;" 
                     class="p-3 d-flex"
                 >
                     <h3>${{ product.price | number : '1.2-2' }}</h3>
+                    <h3>{{ product.price| currency:'INR':'symbol':'2.1-2' }}</h3>
                     <a routerLink="/shop/products/{{ product.id }}" class="btn btn-success">Go</a>
                 </div>
             </div>
@@ -85,4 +94,5 @@
     </tr>
   </tbody>
 </table>
+    
 </div>
