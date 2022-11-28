@@ -71,4 +71,7 @@ export class CartComponent implements OnInit {
             })
         }
     }
+    checkout(){
+        this.router.navigate(['address']);
+    }
 }

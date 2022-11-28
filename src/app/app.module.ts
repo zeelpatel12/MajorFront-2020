@@ -12,8 +12,11 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { CartComponent } from './components/cart/cart.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { OrderDetailsComponent } from './order-details/order-details.component';
-import { IndexComponent } from './index/index.component';
+
+import { AddressComponent } from './components/address/address.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,8 +27,10 @@ import { IndexComponent } from './index/index.component';
     ProductDetailComponent,
     CartComponent,
     UserDetailComponent,
-    OrderDetailsComponent,
-    IndexComponent
+  
+    AddressComponent,
+    PaymentComponent,
+    
   ],
   imports: [
     BrowserModule,
