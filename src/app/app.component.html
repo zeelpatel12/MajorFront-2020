@@ -39,7 +39,7 @@
             >
             <button class="btn btn-outline-success my-2 my-sm-0 mx-3" type="submit">Search</button>
           </form>
-          <div *ngIf="isTokenThere" class="nav-item">
+          <div *ngIf="isTokenThere && role==='user'" class="nav-item">
             <a class="nav-link" routerLink="cart"> Cart <fa-icon [icon]="cart" style="size: 1px;"></fa-icon></a>
           </div>
           <div *ngIf="isTokenThere" class="nav-item">

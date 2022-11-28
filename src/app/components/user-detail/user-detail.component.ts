@@ -22,6 +22,8 @@ export class UserDetailComponent implements OnInit {
     email : string;
     address : string;
     phone : string;
+    role : string;
+    
 
     constructor(private usersService : UsersService, private router : Router) { }
 
@@ -39,6 +41,8 @@ export class UserDetailComponent implements OnInit {
             this.email = user.email;
             this.address = user.address;
             this.phone = user.phone;
+            this.role=user.role;
+       
         }, (error : ErrorEvent) => {
             console.log(error)
         })
@@ -50,7 +54,7 @@ export class UserDetailComponent implements OnInit {
     }
 
     updateUser () {
-        this.usersService.updateUser(this.user.id.toString(), this.username, this.user.password, this.email, this.name, this.address, this.phone).subscribe((user : User) => {
+        this.usersService.updateUser(this.user.id.toString(), this.username, this.user.password, this.email, this.name, this.address, this.phone,this.role).subscribe((user : User) => {
             this.usersService.createToken(user.username).subscribe((token : Token) => {
                 localStorage.removeItem('token')
                 console.log(localStorage.getItem('token'));
