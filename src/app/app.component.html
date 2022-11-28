@@ -23,9 +23,8 @@
             </li>
             <li *ngIf="!isTokenThere" class="nav-item">
                 <a class="nav-link" routerLink="login">Login</a>
-            </li>   <li *ngIf="!isTokenThere" class="nav-item">
-                <a class="nav-link" routerLink="adminlogin">Admin Login</a>
-            </li>
+            </li>  
+             
     
           </ul>
           <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
@@ -130,7 +129,9 @@
                               <li><a href="#">Terms</a></li>
                               <li><a href="#">Privacy</a></li>
                               <li><a href="#">Policy</a></li>
-                              <li><a href="#">Contact</a></li>
+                              <li *ngIf="!isTokenThere" class="nav-item">
+                                <a routerLink="adminlogin">Admin</a>
+                            </li>
                           </ul>
                       </div>
                   </div>
