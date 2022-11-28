@@ -1,0 +1,88 @@
+<div style="margin-top: 5rem;">
+    <!-- <style>
+        .product-img-container {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftransloadit.com%2Fdemos%2Fimage-manipulation%2Fresize-to-100x100%2F&psig=AOvVaw2Tmh14VYbLBszYXd-2-psq&ust=1669542603187000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCJDujYTJy_sCFQAAAAAdAAAAABAD"); */
+            width: 100%;
+            height: 250px;
+        }
+    </style> -->
+    <h1 class="mx-auto text-center" style="margin-bottom: 6rem;">Our Products</h1>
+    <!-- <div class="d-flex" style="justify-content: center; flex-wrap: wrap;">
+        <div *ngFor="let product of products; let i = index">
+            <div 
+                style="width: 300px;"
+                class="mx-5 my-3"
+                *ngIf="product.name.toLowerCase().includes(term.toLowerCase())"
+            >
+                <h6 
+                    style="background-color: #fff5; border-radius: 0 10px 0 0;" 
+                    class="m-0 py-2 px-2"
+                >{{ product.name }}</h6>
+                <div class="product-img-container" [style.backgroundImage]=url()></div>
+                <div 
+                    style="background-color: #fff1; justify-content: space-between; align-items: center;" 
+                    class="p-3 d-flex"
+                >
+                    <h3>${{ product.price | number : '1.2-2' }}</h3>
+                    <a routerLink="/shop/products/{{ product.id }}" class="btn btn-success">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     --><table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Added_On</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image_URL</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Stock</th> 
+      <th scope="col">Category Name</th>
+      <th scope="col" colspan="2" >Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td> 
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td><button type="button" class="btn btn-light">Update</button>
+      <td><button type="button" class="btn btn-light">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td><button type="button" class="btn btn-light">Update</button>
+      <td><button type="button" class="btn btn-light">Delete</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td><button type="button" class="btn btn-light">Update</button>
+      <td><button type="button" class="btn btn-light">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
