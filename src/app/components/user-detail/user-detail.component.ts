@@ -16,7 +16,6 @@ export class UserDetailComponent implements OnInit {
 
     user : User;
     editMode : boolean = false;
-
     name : string;
     username : string;
     email : string;
@@ -72,4 +71,8 @@ export class UserDetailComponent implements OnInit {
             })
         }
     }
+    walletDetail(){
+        this.router.navigate(['wallet']);
+    }
+
 }
