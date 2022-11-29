@@ -16,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
-import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { AddadminComponent } from './components/addadmin/addadmin.component';
+
 
 
 
@@ -29,10 +30,10 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
     ProductDetailComponent,
     CartComponent,
     UserDetailComponent,
-    AdminloginComponent,
     AdmindashboardComponent,
     AddressComponent,
     PaymentComponent,
+    AddadminComponent,
     
   ],
   imports: [

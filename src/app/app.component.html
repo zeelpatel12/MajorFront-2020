@@ -15,7 +15,7 @@
       
         <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto" style="flex-grow: 1;">
-            <li class="nav-item">
+            <li  *ngIf="!isTokenThere || role==='user'"  class="nav-item">
                 <a class="nav-link" routerLink="shop">Shop</a>
             </li>
             <li *ngIf="!isTokenThere" class="nav-item" >
@@ -23,8 +23,32 @@
             </li>
             <li *ngIf="!isTokenThere" class="nav-item">
                 <a class="nav-link" routerLink="login">Login</a>
-           
-    
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Products</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Categories</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Orders</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Admins</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Customers</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Returns</a>
+            </li>
+            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+                <a class="nav-link" routerLink="#">Vendors</a>
+            </li>
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">hello</a>
+                <a class=" nav-link dropdown-content">hi</a>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
             <input 
