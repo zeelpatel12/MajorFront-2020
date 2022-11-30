@@ -17,6 +17,8 @@ import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { OrderDetailComponent } from './components/order-detail/order-detail.component';
+import { PlacedComponent } from './components/placed/placed.component';
 
 
 
@@ -33,6 +35,9 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
     AdmindashboardComponent,
     AddressComponent,
     PaymentComponent,
+    OrderDetailComponent,
+    PlacedComponent,
+   
     
   ],
   imports: [
@@ -40,7 +45,8 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

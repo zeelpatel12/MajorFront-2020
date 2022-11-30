@@ -54,6 +54,7 @@ hr {
 .form {
   display: grid;
   grid-gap: 1rem;
+ 
 }
 
 .field {
@@ -74,6 +75,7 @@ hr {
 }
 
 .field__input {
+  color: white;
   padding: 0;
   margin: 0;
   border: 0;

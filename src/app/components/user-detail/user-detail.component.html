@@ -27,7 +27,8 @@
         <div class="mt-5">
             <button class="btn btn-primary" (click)="editMode = true" style="margin-right: 0.6rem;">Edit</button>
             <button class="btn btn-danger mx-2" (click)="deleteUser()">Delete</button>
-            <button class="btn btn-info mx-2" (click)="logOut()">Log out</button>
+           <button class="btn btn-info mx-2" (click)="logOut()">Log out</button>
+        <button class="btn btn-warning mx-2" (click)="walletDetail()">Wallet</button>
         </div>
     </div>
     <div *ngIf="editMode">
@@ -72,6 +73,7 @@
                 [(ngModel)]="phone"
             >
         </div>
+        
         <h6 class="mt-2">{{ user.cartItems.length }} items in cart</h6>
         <div class="mt-5">
             <button 

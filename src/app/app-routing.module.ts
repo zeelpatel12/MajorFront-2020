@@ -5,11 +5,15 @@ import { AdmindashboardComponent } from './components/admindashboard/admindashbo
 import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LoginComponent } from './components/login/login.component';
+import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { PlacedComponent } from './components/placed/placed.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { WalletComponent } from './components/wallet/wallet.component';
+
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -23,7 +27,12 @@ const routes: Routes = [
     {path: 'address' , component: AddressComponent},
     {path: 'payment', component:PaymentComponent},
     {path: 'adminlogin', component: AdminloginComponent},
-    {path: 'admindashboard', component: AdmindashboardComponent}
+    {path: 'admindashboard', component: AdmindashboardComponent},
+    {path: 'orderDetails', component:OrderDetailComponent},
+    {path: 'pay' , component: PaymentComponent},
+    {path:'placed', component:PlacedComponent},
+    {path:'wallet' , component:WalletComponent}
+   
 ];
 
 @NgModule({
