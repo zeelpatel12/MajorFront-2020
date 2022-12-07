@@ -36,7 +36,7 @@ export class AppComponent {
     }
 
     search () {
-        this.router.navigate(["/shop", this.term]).then(() => window.location.reload())
+        this.router.navigate(["/products", this.term]).then(() => window.location.reload())
     }  
   
 

@@ -1,0 +1,34 @@
+<div class="container"><br><br><br><br>
+    <h1 class="mx-auto text-center mb-5">Add Product</h1>
+    
+   <form class="" action="" (submit)="onSubmit()">
+    <input type="text" placeholder="Name" name="name" id="name" style="border: 1px solid black;"
+      class="" [(ngModel)]="name">
+   <br> <br>
+      <input type="text" placeholder="discription" name="discription" id="discription" style="border: 1px solid black;"
+      class="" [(ngModel)]="description"/>
+      <br> <br>   
+      <input type="text" placeholder="stock" name="stock" id="stock" style="border: 1px solid black;"
+      class=" " [(ngModel)]="stock"/>
+      <br> <br>
+      <input type="text" placeholder="price" name="price" id="price" style="border: 1px solid black;"
+      class=" " [(ngModel)]="price"/>
+      <br> <br>
+
+      <div class="col-md-4">
+      <select class="form-select"   placeholder="Default select category" [ngModelOptions]="{standalone: true}"  [(ngModel)]="category">
+        <option *ngFor="let cat of categories" [ngValue] ="cat">{{cat.categoryName}}</option>
+        <!-- <option value="2">Two</option>
+        <option value="3">Three</option> -->
+      </select></div>
+      <br> <br>
+      <input type="text" placeholder="imageUrl" name="imageUrl" id="imageUrl" style="border: 1px solid black;"
+      class=" " [(ngModel)]="imageUrl"/>
+      <br> <br>
+     <input type="submit" value="Add" style="border: 1px solid black;" class=" btn btn-primary"/>
+   
+         <h4 *ngIf="error" style="text-align: center;" class="alert-danger p-2 m-5 rounded">{{error}}</h4>
+         
+     </form>
+   
+   </div>

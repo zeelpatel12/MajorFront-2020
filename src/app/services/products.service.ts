@@ -13,13 +13,13 @@ export class ProductsService {
 
 
     
-    // createProducts (product: Product) : Observable<Product> {
-    //     return this.http.post<Product>(`${environment.API_URL}/api/products`,product);
-    // }
+    createProducts (product: Product) : Observable<Product> {
+        return this.http.post<Product>(`${environment.API_URL}/api/products`,product);
+    }
 
-    createProduct(product: Object): Observable<Object> {
-        return this.http.post(`${this.baseUrl}`, product);
-      }
+    // createProduct(product: Object): Observable<Object> {
+    //     return this.http.post(`${this.baseUrl}`, product);
+    //   }
       
 
     getProduct (id : string) : Observable<Product> {
@@ -32,11 +32,11 @@ export class ProductsService {
         return this.http.get<Product[]>(`${environment.API_URL}/api/products`);
     }
 
-    updateProduct (id : string,  product: Product ) : Observable<Product> {
+    updateProduct (id : number,  product: Product ) : Observable<Product> {
         return this.http.post<Product>(`${environment.API_URL}/api/products/${id}`, product);
     }
 
-    deleteProduct (id : string ) : Observable<Product> {
+    deleteProduct (id : number ) : Observable<Product> {
         return this.http.delete<Product>(`${environment.API_URL}/api/products/${id}`);
     }
 }

@@ -134,22 +134,22 @@ export class ProductDetailComponent implements OnInit {
           this.product = new Product();
         }
       
-        saveProduct() {
-          this.productsService.createProduct(this.product).subscribe(data =>{
-            console.log(data);
-            this.product = new Product();
-            this.goToProductList();
+        // saveProduct() {
+        //   this.productsService.createProduct(this.product).subscribe(data =>{
+        //     console.log(data);
+        //     this.product = new Product();
+        //     this.goToProductList();
 
-          },
-          error => console.log(error));
+        //   },
+        //   error => console.log(error));
           
-        }
+        // }
  
 
   onSubmit() {
     this.submitted = true;
     console.log(this.product);
-    this.saveProduct();
+    // this.saveProduct();
   }
 
   goToProductList() {

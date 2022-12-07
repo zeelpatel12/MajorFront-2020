@@ -1,0 +1,30 @@
+<!-- 
+  <h1 class="mx-auto text-center mb-5">Add Category</h1>
+  <div class="form-group">
+<form action=" " (submit)="register()">
+ 
+    <label for="categoryname">Category Name:</label><br><br>
+    <input type="text" class="form-control" id="name" placeholder="Enter Category Name"   [(ngModel)]="catName"><br>
+   
+    <button type="submit" name="Add" class="btn btn-primary">Submit</button>
+  <h4 *ngIf="error" style="text-align: center;" class="alert-danger p-2 m-5 rounded">{{error}}</h4>
+</form> 
+</div> -->
+
+<div class="container"><br><br><br><br>
+  <h1 class="mx-auto text-center mb-5">Add Category</h1>
+ 
+ 
+  <form class="" action="" (submit)="register()">
+  
+    <input type="text" placeholder="Name" name="name" id="name" style="border: 1px solid white;"
+      class="mx-3 bg-transparent rounded p-2 col-4 d-block " [(ngModel)]="catName"/>
+
+  <input type="submit" value="Add" style="border: 1px solid #fffa;"
+    class="mx-3 mt-5 rounded p-2 col-2 d-block btn btn-primary"/>
+
+    <h4 *ngIf="error" style="text-align: center;" class="alert-danger p-2 m-5 rounded">{{error}}</h4>
+   
+
+  </form>
+

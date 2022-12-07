@@ -16,6 +16,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CartComponent } from './components/cart/cart.component';
 import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { AddCategoryComponent } from './components/add-category/add-category/add-category.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { AddCategoriesComponent } from './components/add-products/add-categories.component';
+import { ProductComponent } from './components/product/product.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 
 
 
@@ -32,6 +37,11 @@ import { PaymentComponent } from './components/payment/payment.component';
   
     AddressComponent,
     PaymentComponent,
+    AddCategoryComponent,
+    CategoriesComponent,
+    AddCategoriesComponent,
+    ProductComponent,
+    UpdateCategoryComponent,
     
   ],
   imports: [
