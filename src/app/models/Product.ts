@@ -6,6 +6,5 @@ export class Product {
     description : string
     price : Number
     addedOn : Date
-    image : [Byte]
     imageUrl : string
 }

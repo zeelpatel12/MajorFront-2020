@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         this.usersService.login(
             this.username, this.password).subscribe((token : Token) => {
                 localStorage.setItem('token', token.token);
-                this.router.navigateByUrl('/account').then(() => window.location.reload())
+                this.router.navigateByUrl('/dashboard').then(() => window.location.reload())
             }, (error : ErrorEvent) => {
                 console.log(error);
                 this.error = "Invalid login credentials"

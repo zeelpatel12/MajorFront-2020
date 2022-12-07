@@ -7,4 +7,6 @@ export class User {
     address : string
     phone : string
     cartItems : [any]
+    role: string
+    amount: number
 }

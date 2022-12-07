@@ -16,7 +16,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
-import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { AddadminComponent } from './components/addadmin/addadmin.component';
+import { OrdersummaryComponent } from './components/ordersummary/ordersummary.component';
+import { ProductsComponent } from './components/products/products.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductimageaddComponent } from './productimageadd/productimageadd.component';
+
 
 
 
@@ -29,10 +35,15 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
     ProductDetailComponent,
     CartComponent,
     UserDetailComponent,
-    AdminloginComponent,
     AdmindashboardComponent,
     AddressComponent,
     PaymentComponent,
+    AddadminComponent,
+    OrdersummaryComponent,
+    ProductsComponent,
+    AddCategoryComponent,
+    CategoriesComponent,
+    ProductimageaddComponent,
     
   ],
   imports: [
