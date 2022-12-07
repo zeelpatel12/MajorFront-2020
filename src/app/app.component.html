@@ -8,7 +8,7 @@
         }
     </style>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-12 px-5 mb-5 fixed-top">
-        <a class="navbar-brand"routerLink="shop">Amazon</a>
+        <a class="navbar-brand"routerLink="#">Amazon</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,14 +17,30 @@
           <ul class="navbar-nav mr-auto" style="flex-grow: 1;">
             <li  *ngIf="!isTokenThere || role==='user'"  class="nav-item">
                 <a class="nav-link" routerLink="shop">Shop</a>
-            </li>
+            </li> -->
             <li *ngIf="!isTokenThere" class="nav-item" >
               <a class="nav-link" routerLink="register">Register</a>
             </li>
             <li *ngIf="!isTokenThere" class="nav-item">
                 <a class="nav-link" routerLink="login">Login</a>
             </li>
-            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+            <li *ngIf="isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="account"> <i class="fa fa-user" aria-hidden="true">
+                Account</i></a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item" >
+              <a class="nav-link" routerLink="products"> <i class="fab fa-product-hunt">Products</i></a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item" >
+              <a class="nav-link" routerLink="addproduct"><i class="fa fa-plus" aria-hidden="true">Add Products</i></a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item" >
+                <a class="nav-link" routerLink="addcategory"><i class="fas fa-pen-square">Add Category</i></a>
+              </li>
+              <li *ngIf="isTokenThere" class="nav-item" >
+                <a class="nav-link" routerLink="categories"><i class="fa fa-list-alt" aria-hidden="true"> Category</i></a>
+              </li>
+                    <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
                 <a class="nav-link" routerLink="product">Products</a>
             </li>
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
@@ -52,7 +68,14 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown">hello</a>
                 <a class=" nav-link dropdown-content">hi</a>
             </li> -->
+            <!-- <li *ngIf="isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="login">Users</a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item">
+              <a class="nav-link" routerLink=" ">Orders</a>
+            </li> -->
           </ul>
+          
           <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
             <input 
                 class="form-control mr-sm-2 bg-transparent text-success" 
@@ -77,8 +100,8 @@
     
     <router-outlet></router-outlet>
     
-</div>
-    <footer class="footer-section">
+</div> -->
+    <!-- <footer class="footer-section">
       <div class="container">
           <div class="footer-cta pt-5 pb-5">
              
@@ -164,4 +187,4 @@
               </div>
           </div>
       </div>
-  </footer>
+  </footer> -->

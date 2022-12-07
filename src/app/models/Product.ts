@@ -1,10 +1,14 @@
 import { Byte } from "@angular/compiler/src/util"
+import { Category } from "./Category"
 
 export class Product {
-    id : Number
+    id : number
     name : string
     description : string
-    price : Number
+    price : number
     addedOn : Date
     imageUrl : string
+    stock : number
+    category: Category
+    categoryId: number
 }

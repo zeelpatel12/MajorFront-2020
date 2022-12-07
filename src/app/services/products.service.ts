@@ -9,17 +9,51 @@ import { Product } from '../models/Product';
 })
 export class ProductsService {
 
+    private baseUrl = 'http://localhost:8080/api/products';
+
+
+    
+    createProducts (product: Product) : Observable<Product> {
+        return this.http.post<Product>(`${environment.API_URL}/api/products`,product);
+    }
+
+    // createProduct(product: Object): Observable<Object> {
+    //     return this.http.post(`${this.baseUrl}`, product);
+    //   }
+      
+
+    getProduct (id : string) : Observable<Product> {
+        return this.http.get<Product>(`${environment.API_URL}/api/products/${id}`);
+    }
+
     constructor(private http : HttpClient) { }
 
     getProducts () : Observable<Product[]> {
         return this.http.get<Product[]>(`${environment.API_URL}/api/products`);
     }
 
-    getProduct (id : string) : Observable<Product> {
-        return this.http.get<Product>(`${environment.API_URL}/api/products/${id}`);
+    updateProduct (id : number,  product: Product ) : Observable<Product> {
+        return this.http.post<Product>(`${environment.API_URL}/api/products/${id}`, product);
+    }
+
+    deleteProduct (id : number ) : Observable<Product> {
+        return this.http.delete<Product>(`${environment.API_URL}/api/products/${id}`);
     }
 
     addProduct (product : Product) : Observable<Product> {
         return this.http.post<Product>(`${environment.API_URL}/api/products`,product);
     }
 }
+
+  
+  
+  
+   
+  
+  
+    
+  
+    // getProduct (id : string) : Observable<Product> {
+    //     return this.http.get<Product>(`${environment.API_URL}/api/products/${id}`);
+    // }
+

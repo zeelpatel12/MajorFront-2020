@@ -1,4 +1,7 @@
-export class Category{
-        id:number;
-        categoryName: string
+
+
+export class Category {
+    id:number;
+    categoryName: string
+  get: any;
 }

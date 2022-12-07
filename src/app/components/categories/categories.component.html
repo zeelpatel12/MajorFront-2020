@@ -1,4 +1,31 @@
 <div class="container">
+  <div class="row p-5 m-5"><h1 style="text-align: center;">Our Categories</h1><br><br><br>
+    <div class="col-2"></div>
+      <div class="col-8">
+
+    <table class="table table-bordered table-light table-striped">
+      <thead>
+          <tr>
+            <th  scope="col">Category Id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Action</th>
+            <th scope="col">Action</th>
+          </tr>
+      </thead>
+
+    <tbody>
+      <tr>
+      <tr scope= "col" *ngFor= "let category of categories">
+        <td>{{category.id}}</td>
+        <td>{{category.categoryName}}</td>
+        <td><button type="button" class="btn btn-primary" click="" router>Update</button></td>
+        <td><button type="button" class="btn btn-primary" click="deleteCategory(category.id)">Delete</button></td>
+      </tr>
+    </tbody>
+
+</table>
+</div>
+<div class="container">
     <div class="row p-5 m-5">
         <div class="col-2"></div>
         <div class="col-8">
@@ -25,6 +52,7 @@
       </tr>
 
      
+
     </tbody>
 </table>
         </div>
