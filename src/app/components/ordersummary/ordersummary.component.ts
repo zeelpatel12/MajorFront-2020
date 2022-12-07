@@ -4,14 +4,12 @@ import { User } from 'src/app/models/User';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
-  selector: 'app-admindashboard',
-  templateUrl: './admindashboard.component.html',
-  styleUrls: ['./admindashboard.component.css']
+  selector: 'app-ordersummary',
+  templateUrl: './ordersummary.component.html',
+  styleUrls: ['./ordersummary.component.css']
 })
-export class AdmindashboardComponent implements OnInit {
-  public name: string;
+export class OrdersummaryComponent implements OnInit {
   public role: string;
-
   constructor(private usersServive:UsersService, private router :Router) { }
 
   ngOnInit(): void {
@@ -21,7 +19,6 @@ export class AdmindashboardComponent implements OnInit {
   }
 
   this.usersServive.getUserByToken().subscribe((user : User) => {
-     this.name =user.username;
       this.role = user.role;
  
   }, (error : ErrorEvent) => {

@@ -17,6 +17,11 @@ import { AddressComponent } from './components/address/address.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 import { AddadminComponent } from './components/addadmin/addadmin.component';
+import { OrdersummaryComponent } from './components/ordersummary/ordersummary.component';
+import { ProductsComponent } from './components/products/products.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductimageaddComponent } from './productimageadd/productimageadd.component';
 
 
 
@@ -34,6 +39,11 @@ import { AddadminComponent } from './components/addadmin/addadmin.component';
     AddressComponent,
     PaymentComponent,
     AddadminComponent,
+    OrdersummaryComponent,
+    ProductsComponent,
+    AddCategoryComponent,
+    CategoriesComponent,
+    ProductimageaddComponent,
     
   ],
   imports: [

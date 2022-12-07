@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row p-5 m-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th  scope="col">Category Id</th>
+        <th scope="col">Category Name</th>
+        <th scope="col">Action</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <tr scope= "col" *ngFor= "let category of categories">
+         <td>{{category.id}}</td>
+        <td>{{category.categoryName}}</td>
+        <!-- <td>{{order.quantity}}</td>
+        <td>{{order.product.id}}</td>
+        <td>{{order.user.id}}</td> -->
+        <td><button type="button" class="btn btn-info">Edit</button></td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+
+     
+    </tbody>
+</table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

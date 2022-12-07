@@ -9,6 +9,12 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { OrdersummaryComponent } from './components/ordersummary/ordersummary.component';
+import { Product } from './models/Product';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductimageaddComponent } from './productimageadd/productimageadd.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -21,7 +27,11 @@ const routes: Routes = [
     {path: 'cart', component: CartComponent},
     {path: 'address' , component: AddressComponent},
     {path: 'payment', component:PaymentComponent},
-    {path: 'admindashboard', component: AdmindashboardComponent}
+    {path: 'dashboard', component: AdmindashboardComponent},
+    {path: 'ordersummary', component: OrdersummaryComponent},
+    {path: 'product', component: ProductimageaddComponent},
+    {path: 'addCategory', component: AddCategoryComponent},
+    {path:'categories', component: CategoriesComponent}
 ];
 
 @NgModule({

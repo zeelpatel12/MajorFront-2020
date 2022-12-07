@@ -8,4 +8,5 @@ export class User {
     phone : string
     cartItems : [any]
     role: string
+    amount: number
 }

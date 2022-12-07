@@ -25,13 +25,16 @@
                 <a class="nav-link" routerLink="login">Login</a>
             </li>
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
-                <a class="nav-link" routerLink="#">Products</a>
+                <a class="nav-link" routerLink="product">Products</a>
             </li>
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
-                <a class="nav-link" routerLink="#">Categories</a>
+                <a class="nav-link" routerLink="categories">Categories</a>
             </li>
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
-                <a class="nav-link" routerLink="#">Orders</a>
+                <a class="nav-link" routerLink="product">Product Image</a>
+            </li>
+            <li *ngIf="isTokenThere" class="nav-item">
+                <a class="nav-link" routerLink="ordersummary">Orders</a>
             </li>
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
                 <a class="nav-link" routerLink="#">Admins</a>
@@ -42,13 +45,13 @@
             <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
                 <a class="nav-link" routerLink="#">Returns</a>
             </li>
-            <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
+            <!-- <li *ngIf="isTokenThere && role==='admin'" class="nav-item">
                 <a class="nav-link" routerLink="#">Vendors</a>
             </li>
             <li class="dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown">hello</a>
                 <a class=" nav-link dropdown-content">hi</a>
-            </li>
+            </li> -->
           </ul>
           <form class="form-inline my-2 my-lg-0 d-flex" (submit)="search()">
             <input 
