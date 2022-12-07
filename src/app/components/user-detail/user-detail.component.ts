@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faMapMarkerAlt, faPhoneAlt} from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faPhoneAlt , faRupeeSign} from "@fortawesome/free-solid-svg-icons";
 import { Token } from 'src/app/models/Token';
 import { User } from 'src/app/models/User';
 import { UsersService } from 'src/app/services/users.service';
@@ -12,8 +12,8 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class UserDetailComponent implements OnInit {
     marker = faMapMarkerAlt;
-    phoneIcon = faPhoneAlt
-
+    phoneIcon = faPhoneAlt;
+    rupee=faRupeeSign;
     user : User;
     editMode : boolean = false;
 
@@ -22,7 +22,8 @@ export class UserDetailComponent implements OnInit {
     email : string;
     address : string;
     phone : string;
-    role : string;
+   public  role : string;
+    public amount : number;;
     
 
     constructor(private usersService : UsersService, private router : Router) { }
@@ -42,7 +43,7 @@ export class UserDetailComponent implements OnInit {
             this.address = user.address;
             this.phone = user.phone;
             this.role=user.role;
-       
+            this.amount = user.amount;       
         }, (error : ErrorEvent) => {
             console.log(error)
         })
@@ -54,7 +55,7 @@ export class UserDetailComponent implements OnInit {
     }
 
     updateUser () {
-        this.usersService.updateUser(this.user.id.toString(), this.username, this.user.password, this.email, this.name, this.address, this.phone,this.role).subscribe((user : User) => {
+        this.usersService.updateUser(this.user.id.toString(), this.username, this.user.password, this.email, this.name, this.address, this.phone,this.role,this.amount).subscribe((user : User) => {
             this.usersService.createToken(user.username).subscribe((token : Token) => {
                 localStorage.removeItem('token')
                 console.log(localStorage.getItem('token'));

@@ -21,9 +21,16 @@
         </div>
         <div class="d-flex" style="align-items: baseline;">
             <fa-icon [icon]="phoneIcon" style="margin-right: 1rem;" size="1x"></fa-icon>
-            <h6>+{{ user.phone }}</h6>
+            <h6>{{ user.phone }}</h6>
         </div>
-        <h6>{{ user.cartItems.length }} items in cart</h6>
+        <div  *ngIf="isTokenThere && role==='user'"  >
+        <div class="d-flex" style="align-items: baseline;">
+            <fa-icon [icon]="rupee" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <h6>{{ user.amount }}</h6>
+        </div>
+        
+        <h6>{{ user.cartItems.length }} items in cart</h6></div>
+        <div  *ngIf="isTokenThere && role==='admin'" ><h6 class="mt-2">{{user.role}}</h6></div>
         <div class="mt-5">
             <button class="btn btn-primary" (click)="editMode = true" style="margin-right: 0.6rem;">Edit</button>
             <button class="btn btn-danger mx-2" (click)="deleteUser()">Delete</button>
@@ -38,6 +45,7 @@
             [(ngModel)]="name"
             autofocus
         >
+        
         <div>
             <input 
                 type="text" 
@@ -72,7 +80,18 @@
                 [(ngModel)]="phone"
             >
         </div>
-        <h6 class="mt-2">{{ user.cartItems.length }} items in cart</h6>
+        <div  *ngIf="isTokenThere && role==='user'"  >
+        <div class="d-flex" style="align-items: baseline;">
+            <fa-icon [icon]="rupee" style="margin-right: 1rem;" size="1x"></fa-icon>
+            <input 
+                type="text" 
+                class="form-input" 
+                style="font-size: 16px; font-weight: 500; color: white;"
+                [(ngModel)]="amount"
+            >
+        </div>
+        <h6 class="mt-2">{{ user.cartItems.length }} items in cart</h6></div>
+        <div  *ngIf="isTokenThere && role==='admin'" ><h6 class="mt-2">{{user.role}}</h6></div>
         <div class="mt-5">
             <button 
                 class="btn btn-success" 

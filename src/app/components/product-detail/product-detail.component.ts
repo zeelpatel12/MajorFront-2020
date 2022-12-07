@@ -25,10 +25,9 @@ export class ProductDetailComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        this.productsService.getProduct(this.route.snapshot.paramMap.get('id')).subscribe((product : Product) => {
-            this.product = product
-            this.product.imageUrl = product.image ? 'data:image/jpeg;base64,' + product.image :
-            "../../../assets/static/images/apple.jpg";
+        this.productsService.getProduct(this.route.snapshot.paramMap.get('id')).subscribe((product1 : Product) => {
+            this.product = product1
+          
         }, (error: ErrorEvent) => {
             console.log(this.product);
         })
